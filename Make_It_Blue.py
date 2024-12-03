@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Dec  2 20:36:30 2024
-
-@author: GS
-"""
 import numpy as np
 from PIL import Image
 def get_concat_h(im1, im2):
@@ -12,6 +6,8 @@ def get_concat_h(im1, im2):
     dst.paste(im2, (im1.width, 0))
     return dst
 lena_image ="lenna.png"
+#one can download the picture from the link below:
+   # https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/images%20/images_part_1/lenna.png
 image = Image.open(lena_image)
 lenna_array = np.array(image)
 lenna_blue = lenna_array.copy()
